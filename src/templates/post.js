@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-import Container from '../components/Container'
+import PostContainer from '../components/PostContainer'
 import PageBody from '../components/PageBody'
 import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
@@ -34,11 +34,11 @@ const PostTemplate = ({ data, pageContext }) => {
 
       <Hero title={title} image={heroImage} height={'50vh'} />
 
-      <Container>
+      <PostContainer>
         {tags && <TagList tags={tags} />}
         <PostDate date={publishDate} />
         <PageBody body={body} />
-      </Container>
+      </PostContainer>
       <PostLinks previous={previous} next={next} />
     </Layout>
   )

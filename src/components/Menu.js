@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import Headroom from 'react-headroom'
 
 const Header = styled.header`
   background: palevioletred;
@@ -45,27 +46,29 @@ const activeLinkStyle = {
 
 const Menu = () => {
   return (
-    <Header>
-      <Nav>
-        <ul>
-          <li>
-            <Link to="/" activeStyle={activeLinkStyle}>
-              Home
+    <Headroom>
+      <Header>
+        <Nav>
+          <ul>
+            <li>
+              <Link to="/" activeStyle={activeLinkStyle}>
+                Home
             </Link>
-          </li>
-          <li>
-            <Link to="/about/" activeStyle={activeLinkStyle}>
-              About
+            </li>
+            <li>
+              <Link to="/about/" activeStyle={activeLinkStyle}>
+                About
             </Link>
-          </li>
-          <li>
-            <Link to="/contact/" activeStyle={activeLinkStyle}>
-              Contact
+            </li>
+            <li>
+              <Link to="/contact/" activeStyle={activeLinkStyle}>
+                Contact
             </Link>
-          </li>
-        </ul>
-      </Nav>
-    </Header>
+            </li>
+          </ul>
+        </Nav>
+      </Header>
+    </Headroom>
   )
 }
 
