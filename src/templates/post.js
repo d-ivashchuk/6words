@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
-import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import PostContainer from '../components/PostContainer'
 import PageBody from '../components/PageBody'
@@ -26,7 +25,7 @@ const PostTemplate = ({ data, pageContext }) => {
   const next = pageContext.next
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
@@ -40,7 +39,7 @@ const PostTemplate = ({ data, pageContext }) => {
         <PageBody body={body} />
       </PostContainer>
       <PostLinks previous={previous} next={next} />
-    </Layout>
+    </>
   )
 }
 

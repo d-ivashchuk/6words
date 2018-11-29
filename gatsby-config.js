@@ -39,6 +39,7 @@ module.exports = {
     },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-layout`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

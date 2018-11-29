@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from '../layouts/index'
 import CardList from '../components/CardList'
 import Card from '../components/Card'
 import Helmet from 'react-helmet'
@@ -16,7 +16,7 @@ const Index = ({ data, pageContext }) => {
   const isFirstPage = currentPage === 1
 
   return (
-    <Layout>
+    <>
       <SEO />
       {!isFirstPage && (
         <Helmet>
@@ -40,7 +40,7 @@ const Index = ({ data, pageContext }) => {
         )}
       </Container>
       <Pagination context={pageContext} />
-    </Layout>
+    </>
   )
 }
 

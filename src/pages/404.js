@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Helmet from 'react-helmet'
 import PageTitle from '../components/PageTitle'
 import Container from '../components/Container'
-import Layout from '../components/Layout'
+import Layout from '../layouts/index'
 
 const Text = styled.p`
   text-align: center;

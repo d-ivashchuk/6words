@@ -5,10 +5,11 @@ import Img from 'gatsby-image'
 
 const Post = styled.li`
   position: relative;
-  border: 1px solid ${props => props.theme.colors.secondary};
   margin: 0 0 1em 0;
   width: 100%;
-  transition: background 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px;
+  border-radius: 8px;
+  transition: all 0.3s;
   @media screen and (min-width: ${props => props.theme.responsive.small}) {
     flex: ${props => (props.featured ? '0 0 100%' : '0 0 49%')};
     margin: 0 0 2vw 0;
@@ -17,10 +18,13 @@ const Post = styled.li`
     flex: ${props => (props.featured ? '0 0 100%' : '0 0 32%')};
   }
   &:hover {
-    background: ${props => props.theme.colors.tertiary};
+    transform: translateY(-3px);
+    transition: all 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px;
   }
   a {
     display: flex;
+    background: none;
     flex-flow: column;
     height: 100%;
     width: 100%;
@@ -41,6 +45,12 @@ const Title = styled.h2`
   font-weight: 600;
   text-transform: capitalize;
   margin: 1rem 1rem 0.5rem 1rem;
+  transition: all 0.4s ease;
+  ${Post}:hover & {
+    color: #007acc !important;
+    transition: all 0.4s ease;
+    background-size: 100% 100%;
+  }
 `
 
 const Date = styled.h3`
@@ -51,6 +61,9 @@ const Date = styled.h3`
 const Excerpt = styled.p`
   margin: 0 1rem 1rem 1rem;
   line-height: 1.6;
+  &:hover {
+    color: black;
+  }
 `
 
 const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {

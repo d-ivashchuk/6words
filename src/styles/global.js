@@ -115,5 +115,20 @@ const GlobalStyle = createGlobalStyle`
       box-shadow: none;
     }
   }
+  a{
+    text-decoration:none;
+    transition: all .4s ease;
+    background: linear-gradient(to bottom, transparent 62%, #FFEB3B 0) center center/0% 75% no-repeat;
+    cursor: pointer;
+    color: rgba(80, 89, 113, 0.7);
+  &:hover {
+    color: #5b8bf7;
+    transition: all .4s ease;
+    background-size: 100% 100%;
+  }
+  &:active {
+    background-size: 80% 100%;
+  }
+}
 `
 export default GlobalStyle

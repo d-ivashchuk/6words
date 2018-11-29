@@ -4,16 +4,18 @@ import styled from 'styled-components'
 import Headroom from 'react-headroom'
 
 const Header = styled.header`
-  background: #FF80AB;
+  background: none;
   width: 100%;
-  padding: 1.5em 0;
+  padding: 1.3em 0;
+  background-color: rgba(250, 250, 250, 0.95);
+  box-shadow: 0px 1px 8px #ccc;
 `
 const Nav = styled.nav`
   width: 100%;
   max-width: ${props => props.theme.sizes.maxWidth};
   margin: 0 auto;
   padding: 0 1.5em;
-
+  font-size: 18px;
   ul {
     display: flex;
     justify-content: space-between;
@@ -31,17 +33,20 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    color: whitesmoke;
+    color: #888;
     font-weight: 600;
     transition: all 0.2s;
     &:hover {
-      color: white;
+      color: #666;
     }
   }
 `
 
 const activeLinkStyle = {
-  color: 'white',
+  color: '#666',
+  background:
+    'linear-gradient(to bottom, transparent 62%, #FFEB3B 0) center center/0% 75% no-repeat',
+  backgroundSize: '100% 100%',
 }
 
 const Menu = () => {
@@ -53,17 +58,17 @@ const Menu = () => {
             <li>
               <Link to="/" activeStyle={activeLinkStyle}>
                 Home
-            </Link>
+              </Link>
             </li>
             <li>
               <Link to="/about/" activeStyle={activeLinkStyle}>
                 About
-            </Link>
+              </Link>
             </li>
             <li>
               <Link to="/contact/" activeStyle={activeLinkStyle}>
                 Contact
-            </Link>
+              </Link>
             </li>
           </ul>
         </Nav>

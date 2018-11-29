@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
-import Layout from '../components/Layout'
+
 import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
 import PageBody from '../components/PageBody'
@@ -13,7 +13,7 @@ const PageTemplate = ({ data }) => {
   const postNode = data.contentfulPage
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
@@ -23,7 +23,7 @@ const PageTemplate = ({ data }) => {
         <PageTitle>{title}</PageTitle>
         <PageBody body={body} />
       </Container>
-    </Layout>
+    </>
   )
 }
 

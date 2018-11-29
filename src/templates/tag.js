@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
-import Layout from '../components/Layout'
 import Card from '../components/Card'
 import CardList from '../components/CardList'
 import PageTitle from '../components/PageTitle'
@@ -21,7 +20,7 @@ const TagTemplate = ({ data, pageContext }) => {
   const isFirstPage = currentPage === 1
 
   return (
-    <Layout>
+    <>
       {isFirstPage ? (
         <Helmet>
           <title>{`Tag: ${title} - ${config.siteTitle}`}</title>
@@ -60,7 +59,7 @@ const TagTemplate = ({ data, pageContext }) => {
         </CardList>
       </Container>
       <Pagination context={pageContext} />
-    </Layout>
+    </>
   )
 }
 
