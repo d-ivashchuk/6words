@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Headroom from 'react-headroom'
 
 const Header = styled.header`
-  background: palevioletred;
+  background: #FF80AB;
   width: 100%;
   padding: 1.5em 0;
 `
