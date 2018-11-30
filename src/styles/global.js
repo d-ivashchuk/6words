@@ -51,12 +51,6 @@ const GlobalStyle = createGlobalStyle`
     display: block;
   }
 
-  @media screen and (min-width: 35em) {
-    html {
-      margin-right: calc(-100vw + 100%);
-      overflow-x: hidden;
-    }
-  }
 
   ol, ul, li {
     list-style: none;
