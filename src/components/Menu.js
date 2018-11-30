@@ -45,7 +45,7 @@ const Nav = styled.nav`
 const activeLinkStyle = {
   color: '#666',
   background:
-    'linear-gradient(to bottom, transparent 62%, #FFEB3B 0) center center/0% 75% no-repeat',
+    'linear-gradient(to bottom, transparent 62%, #c1e0f7 0) center center/0% 75% no-repeat',
   backgroundSize: '100% 100%',
 }
 

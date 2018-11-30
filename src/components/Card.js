@@ -38,6 +38,9 @@ const Post = styled.li`
       }
     }
   }
+  img {
+    filter: brightness(0.9);
+  }
 `
 
 const Title = styled.h2`
